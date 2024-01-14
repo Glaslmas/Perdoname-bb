@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perdon amor</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 150px;
+    }
+
+    #no-btn {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Me perdonas amor?</h1>
+  <button id="yes-btn" onclick="showMessage()">Si</button>
+  <button id="no-btn" onmouseover="moveButton()">No</button>
+
+  <script>
+    function showMessage() {
+      document.body.innerHTML = "<h1>Tambien te amo mi amor</h1>";
+    }
+
+    function moveButton() {
+      var btn = document.getElementById("no-btn");
+      var pageWidth = document.documentElement.offsetWidth;
+      var pageHeight = document.documentElement.offsetHeight;
+      var btnWidth = btn.offsetWidth;
+      var btnHeight = btn.offsetHeight;
+
+      btn.style.position = "absolute";
+      btn.style.left = Math.random() * (pageWidth - btnWidth) + "px";
+      btn.style.top = Math.random() * (pageHeight - btnHeight) + "px";
+    }
+  </script>
+</body>
+</html>
